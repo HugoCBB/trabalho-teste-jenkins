@@ -9,6 +9,8 @@ services:
         volumes:
             - jenkins_home:/var/jenkins_home
             - ./projeto-exemplo:/projeto:ro
+        environment:
+            - JAVA_OPTS=-Djava.net.preferIPv4Stack=true
         restart: unless-stopped
 
 volumes:
